@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.okhttp3:okhttp-tls:4.9.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-tls/4.9.1/6ac0b580698f2fe0f19014f744f708cbb72eec82/okhttp-tls-4.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-tls/4.9.1/b1a7db343b38d5c748a52e26a7aae2e13f665a11/okhttp-tls-4.9.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-tls/4.9.1/7099cf0b0125408280d6a240d88be814b81ec1f6/okhttp-tls-4.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

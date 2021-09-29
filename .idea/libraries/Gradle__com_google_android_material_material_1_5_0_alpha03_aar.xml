@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.material:material:1.5.0-alpha03@aar">
+    <ANNOTATIONS>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fbc0550f7cee3d671b1a4abff93f820d/transformed/material-1.5.0-alpha03/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fbc0550f7cee3d671b1a4abff93f820d/transformed/material-1.5.0-alpha03/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fbc0550f7cee3d671b1a4abff93f820d/transformed/material-1.5.0-alpha03/res" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fbc0550f7cee3d671b1a4abff93f820d/transformed/material-1.5.0-alpha03/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/modules-2/files-2.1/com.google.android.material/material/1.5.0-alpha03/f728f706df0048394aa164f486db40304fecd95a/material-1.5.0-alpha03-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

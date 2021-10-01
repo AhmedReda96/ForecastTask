@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.legacy:legacy-support-core-utils:1.0.0@aar">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e6e6a36c819be6b8b1d1e093bc84eae4/transformed/legacy-support-core-utils-1.0.0/res" />
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/9e044225ff306ee8b67dbe5cf9d4b996/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/9e044225ff306ee8b67dbe5cf9d4b996/transformed/legacy-support-core-utils-1.0.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/9e044225ff306ee8b67dbe5cf9d4b996/transformed/legacy-support-core-utils-1.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/9e044225ff306ee8b67dbe5cf9d4b996/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

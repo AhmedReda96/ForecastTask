@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ForecastTask</string>
+    <string name="enterCityName">Enter city name...</string>
+    <string name="warningMessage">warning it is not accurate date</string>
+    <string name="retry">Retry</string>
+
 </resources>

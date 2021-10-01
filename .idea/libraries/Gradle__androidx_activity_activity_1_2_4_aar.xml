@@ -4,9 +4,8 @@
       <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/513c71f7ba40cfb5ed9b0e010cde7655/transformed/jetified-activity-1.2.4/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/aac9f9900e5d9793adbdc4d4cab4edac/transformed/jetified-activity-1.2.4/res" />
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/513c71f7ba40cfb5ed9b0e010cde7655/transformed/jetified-activity-1.2.4/res" />
       <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/513c71f7ba40cfb5ed9b0e010cde7655/transformed/jetified-activity-1.2.4/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/513c71f7ba40cfb5ed9b0e010cde7655/transformed/jetified-activity-1.2.4/res" />
       <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/513c71f7ba40cfb5ed9b0e010cde7655/transformed/jetified-activity-1.2.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />

@@ -1,7 +1,8 @@
-package com.example.forecasttask
+package com.example.forecasttask.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.forecasttask.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.interpolator:interpolator:1.0.0@aar">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e9ed5a7df289586d77c50e4ea128707c/transformed/interpolator-1.0.0/res" />
+      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/92e1eb64f781c9e3279ebad79d663b33/transformed/interpolator-1.0.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/92e1eb64f781c9e3279ebad79d663b33/transformed/interpolator-1.0.0/res" />
       <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/92e1eb64f781c9e3279ebad79d663b33/transformed/interpolator-1.0.0/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/92e1eb64f781c9e3279ebad79d663b33/transformed/interpolator-1.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

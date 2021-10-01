@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.arch.core:core-runtime:2.1.0@aar">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/20b4639d033624c74b7fc443c8a58825/transformed/core-runtime-2.1.0/res" />
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e1e203c7143e2199fbf13399ca1910fa/transformed/core-runtime-2.1.0/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e1e203c7143e2199fbf13399ca1910fa/transformed/core-runtime-2.1.0/res" />
       <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e1e203c7143e2199fbf13399ca1910fa/transformed/core-runtime-2.1.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e1e203c7143e2199fbf13399ca1910fa/transformed/core-runtime-2.1.0/res" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/e1e203c7143e2199fbf13399ca1910fa/transformed/core-runtime-2.1.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

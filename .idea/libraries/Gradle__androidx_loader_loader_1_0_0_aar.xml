@@ -1,10 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.loader:loader:1.0.0@aar">
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/a362936779cbdcb47a515edb33ac8224/transformed/loader-1.0.0/res" />
       <root url="jar://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fb11e8536e968c5a0c767c5ffee85aee/transformed/loader-1.0.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fb11e8536e968c5a0c767c5ffee85aee/transformed/loader-1.0.0/AndroidManifest.xml" />
       <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fb11e8536e968c5a0c767c5ffee85aee/transformed/loader-1.0.0/res" />
+      <root url="file://$PROJECT_DIR$/../JobApp-master/gradle/caches/transforms-3/fb11e8536e968c5a0c767c5ffee85aee/transformed/loader-1.0.0/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

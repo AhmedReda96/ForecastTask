@@ -1,25 +1,25 @@
-package com.example.forecastapp.model
+package com.example.forecasttask.model
 
 import com.google.gson.annotations.SerializedName
 
 data class NewsList (
 
     @SerializedName("dt")
-        val dt: Int,
+        val dt: Int?,
     @SerializedName("weather")
         val weather: List<Weather>,
     @SerializedName("clouds")
         val clouds: Clouds,
     @SerializedName("wind")
-        val wind: Wind,
+        val wind: Wind?,
     @SerializedName("visibility")
-        val visibility: Int,
+        val visibility: Int?,
     @SerializedName("pop")
-        val pop: Double,
+        val pop: Double?,
     @SerializedName("sys")
-        val sys: Sys,
+        val sys: Sys?,
     @SerializedName("rain")
-        val rain: Rain,
+        val rain: Rain?,
     @SerializedName("dt_txt")
-        val dtTxt: String
+        val dtTxt: String?
     )

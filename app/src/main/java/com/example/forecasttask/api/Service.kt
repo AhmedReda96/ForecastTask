@@ -1,6 +1,6 @@
 package com.example.forecasttask.api
 
-import com.example.forecastapp.model.NewsResponse
+import com.example.forecasttask.model.NewsResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

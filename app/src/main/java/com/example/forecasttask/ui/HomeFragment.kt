@@ -1,5 +1,6 @@
 package com.example.forecasttask.ui
 
+import android.Manifest
 import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -11,6 +12,7 @@ import com.example.forecasttask.viewModel.HomeViewModel
 import kotlinx.android.synthetic.main.home_fragment.*
 import android.content.DialogInterface
 import android.app.AlertDialog
+import android.content.Context
 import android.util.Log
 import com.google.android.material.textfield.TextInputEditText
 
@@ -25,6 +27,15 @@ import com.example.forecasttask.helper.CitiesAdapter
 import io.reactivex.Observable
 import io.reactivex.ObservableOnSubscribe
 import java.util.concurrent.TimeUnit
+import android.location.LocationManager
+
+import android.content.Context.LOCATION_SERVICE
+import android.content.pm.PackageManager
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+
+import androidx.core.content.ContextCompat.getSystemService
+
 
 class HomeFragment : Fragment(), View.OnClickListener {
 
@@ -33,6 +44,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
     private lateinit var viewModel: HomeViewModel
     private var citiesList: List<CityEntity>? = null
     private lateinit var citiesAdapter: CitiesAdapter
+    private val REQUEST_PERMISSIONS_REQUEST_CODE = 44
 
 
     companion object {
@@ -69,9 +81,9 @@ class HomeFragment : Fragment(), View.OnClickListener {
             searchBar.setOnQueryTextListener(object : OnQueryTextListener {
 
                 override fun onQueryTextChange(newText: String): Boolean {
-                    if (newText.length==0){
+                    if (newText.length == 0) {
                         getCities()
-                    }else{
+                    } else {
                         subscriber.onNext(newText!!)
                     }
                     return true
@@ -89,7 +101,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
         }.debounce(2, TimeUnit.SECONDS)
             .distinctUntilChanged()
             .subscribe { text ->
-                //viewModel.search(text)
+                viewModel.search("%$text%")
                 Log.d("TAG", "testTag  final search: $text")
 
             }
@@ -98,15 +110,41 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
     @SuppressLint("NotifyDataSetChanged")
     private fun getCities() {
-        viewModel.getCities()?.observe(requireActivity(), Observer {
-            citiesList=null
-            citiesList = it
-            Log.d("TAG", "testTag getCities: ${citiesList?.size} ")
-            citiesAdapter = citiesList?.let { it1 -> CitiesAdapter(it1, requireActivity()) }!!
-            citiesAdapter.notifyDataSetChanged()
-            citiesRV.adapter = citiesAdapter
+        viewModel.getCities()
+        viewModel.citiesLiveData?.observe(requireActivity(), Observer {
+            Log.d("TAG", "testTag getCitiesdd: ${citiesList?.size} ")
 
+            if (it.size == 0) {
+                requestLocation()
+            } else {
+                citiesList = null
+                citiesList = it
+                Log.d("TAG", "testTag getCities: ${citiesList?.size} ")
+                citiesAdapter = citiesList?.let { it1 -> CitiesAdapter(it1, requireActivity()) }!!
+                citiesAdapter.notifyDataSetChanged()
+                citiesRV.adapter = citiesAdapter
+            }
         })
+
+    }
+
+    private fun requestLocation() {
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) ==
+            PackageManager.PERMISSION_GRANTED
+        ) {
+            //  generalMethods.getCurrentLocation()
+        } else {
+            ActivityCompat.requestPermissions(
+                requireActivity(),
+                arrayOf(Manifest.permission.ACCESS_FINE_LOCATION),
+                REQUEST_PERMISSIONS_REQUEST_CODE
+            )
+        }
+
+
     }
 
     override fun onClick(view: View?) {
@@ -149,6 +187,7 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
 
     }
+
 
 }
 

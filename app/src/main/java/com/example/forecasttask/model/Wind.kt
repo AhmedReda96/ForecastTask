@@ -1,4 +1,4 @@
-package com.example.forecastapp.model
+package com.example.forecasttask.model
 
 
 import androidx.room.Embedded

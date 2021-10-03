@@ -1,8 +1,8 @@
 package com.example.forecasttask.helper
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.content.Context
+import android.os.Bundle
 import android.os.Parcel
 import android.os.Parcelable
 import android.view.LayoutInflater
@@ -14,21 +14,21 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.forecasttask.R
 import com.example.forecasttask.db.CityEntity
 import com.example.forecasttask.viewModel.HomeViewModel
-import kotlinx.android.synthetic.main.city_item_model.view.*
 import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.recyclerview.widget.RecyclerView.Adapter
+import kotlinx.android.synthetic.main.city_item_model.view.*
 
 
-class CitiesAdapter() : Adapter<ViewHolder>(), Parcelable {
+class CitiesAdapter() : RecyclerView.Adapter<CitiesAdapter.ViewHolder>() {
     private var citiesList: List<CityEntity> = ArrayList()
     private lateinit var context: Context
     private lateinit var viewModel: HomeViewModel
+    private lateinit var bundle: Bundle
 
-    constructor(parcel: Parcel) : this() {
-
-    }
 
 
     constructor(
@@ -38,8 +38,10 @@ class CitiesAdapter() : Adapter<ViewHolder>(), Parcelable {
         this.citiesList = citiesList
         this.context = context
         viewModel =
-            ViewModelProviders.of((context as FragmentActivity)!!).get(HomeViewModel::class.java)
+            ViewModelProvider((context as FragmentActivity)!!)[HomeViewModel::class.java]
         viewModel.init(context)
+        bundle = Bundle()
+
     }
 
 
@@ -53,7 +55,20 @@ class CitiesAdapter() : Adapter<ViewHolder>(), Parcelable {
         return citiesList.size
     }
 
-    @SuppressLint("UseCompatLoadingForDrawables")
+
+
+
+
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val deleteBtn: ImageButton = itemView.deleteBtn
+        val cityName: TextView = itemView.cityName
+
+
+    }
+
+
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val model: CityEntity = citiesList[position]
 
@@ -71,34 +86,13 @@ class CitiesAdapter() : Adapter<ViewHolder>(), Parcelable {
         holder.deleteBtn.setOnClickListener {
             model.id?.let { it1 -> viewModel.deleteCity(it1) }
         }
-    }
+        holder.itemView.setOnClickListener {
+            bundle.putString("cityName", model.name)
+            it.findNavController().navigate(R.id.action_homeFragment_to_detailsFragment, bundle)
 
-    override fun writeToParcel(parcel: Parcel, flags: Int) {
-
-    }
-
-    override fun describeContents(): Int {
-        return 0
-    }
-
-    companion object CREATOR : Parcelable.Creator<CitiesAdapter> {
-        override fun createFromParcel(parcel: Parcel): CitiesAdapter {
-            return CitiesAdapter(parcel)
-        }
-
-        override fun newArray(size: Int): Array<CitiesAdapter?> {
-            return arrayOfNulls(size)
-        }
-    }
+        }    }
 
 
 }
 
-class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    val deleteBtn: ImageButton = itemView.deleteBtn
-    val cityName: TextView = itemView.cityName
-
-
-}
 

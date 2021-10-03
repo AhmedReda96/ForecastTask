@@ -8,6 +8,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.forecasttask.ui.HomeFragment"
         android:label="home_fragment"
+        app:popUpToInclusive="true"
         tools:layout="@layout/home_fragment" >
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"

@@ -20,6 +20,6 @@ interface CityDao {
     @Query("DELETE FROM citiesTable WHERE id = :id")
     suspend fun delete(id:Int)
 
-    @Query("SELECT * FROM citiesTable WHERE name LIKE '%' || :search_query || '%'")
-    fun searchCity(search_query: String?): LiveData<List<CityEntity>>
+    @Query("SELECT * FROM citiesTable WHERE name LIKE  :search_query ")
+    fun searchCity(search_query: String?):List<CityEntity>
 }

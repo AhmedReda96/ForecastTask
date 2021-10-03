@@ -3,5 +3,10 @@
     <string name="enterCityName">Enter city name...</string>
     <string name="warningMessage">warning it is not accurate date</string>
     <string name="retry">Retry</string>
+    <string name="weather">Weather</string>
+    <string name="clouds">Clouds</string>
+    <string name="wind">Wind</string>
+    <string name="rain">Rain</string>
+    <string name="date">Date</string>
 
 </resources>

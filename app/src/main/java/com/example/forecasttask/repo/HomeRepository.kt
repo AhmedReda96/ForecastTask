@@ -4,6 +4,7 @@ import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
+import androidx.lifecycle.Observer
 import com.example.forecasttask.db.CityDao
 import com.example.forecasttask.db.CityEntity
 import com.example.forecasttask.db.MainDataBase
@@ -48,14 +49,10 @@ class HomeRepository(private val context: Context) {
         }
     }
 
-    fun search(query:String): LiveData<List<CityEntity>>? {
+    fun search(query: String): List<CityEntity>? {
+       // Log.d(TAG, "testTag Repo: ${dao?.searchCity(query)?.}")
 
-        return dao?.searchCity(query)
-
-
-
-
-
+        return  dao?.searchCity(query)
     }
 
 }

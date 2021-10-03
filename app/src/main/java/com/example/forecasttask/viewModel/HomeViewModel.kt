@@ -9,7 +9,7 @@ import com.example.forecasttask.repo.HomeRepository
 
 class HomeViewModel() : ViewModel() {
     private lateinit var repo: HomeRepository
-    var citiesMutableLiveData: MutableLiveData<List<CityEntity>> = MutableLiveData<List<CityEntity>>()
+    var citiesLiveData: LiveData<List<CityEntity>>?=null
 
     fun init(context: Context) {
         repo = HomeRepository(context)
@@ -17,7 +17,9 @@ class HomeViewModel() : ViewModel() {
     }
 
     fun getCities(): LiveData<List<CityEntity>>? {
-        return repo.getCitiesFromRoom()
+        return repo.getCitiesFromRoom().also {
+            citiesLiveData= it
+        }
     }
 
     fun insertCityToRoom(cityName: String, default: Boolean): Boolean {
@@ -29,12 +31,8 @@ class HomeViewModel() : ViewModel() {
         return repo.deleteCity(id)
     }
 
-    fun search(query:String): LiveData<List<CityEntity>>? {
-
-        return repo?.search(query)
-
-
-
+    fun search(query:String) {
+         repo.search(query)
 
     }
 }

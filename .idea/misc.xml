@@ -3,11 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-hdpi/ic_no_internet.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.178125" />
         <entry key="app/src/main/res/layout/city_item_model.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/details_fragment.xml" value="0.178125" />
+        <entry key="app/src/main/res/layout/details_fragment.xml" value="0.2" />
         <entry key="app/src/main/res/layout/enter_city_dialog.xml" value="0.5" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.16" />
+        <entry key="app/src/main/res/layout/news_item_model.xml" value="0.18" />
       </map>
     </option>
   </component>
